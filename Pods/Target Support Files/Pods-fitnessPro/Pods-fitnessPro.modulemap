@@ -1,0 +1,6 @@
+framework module Pods_fitnessPro {
+  umbrella header "Pods-fitnessPro-umbrella.h"
+
+  export *
+  module * { export * }
+}
