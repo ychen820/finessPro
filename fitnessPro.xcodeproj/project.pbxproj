@@ -7,15 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37C27990B9CE438DA521215B /* Pods_fitnessPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B023669F9A5A6CB031C2CF /* Pods_fitnessPro.framework */; };
+		C51DFA281ECEAEC600C729DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DFA271ECEAEC600C729DF /* SignUpViewController.swift */; };
+		C51DFA2A1ECEBAF600C729DF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DFA291ECEBAF600C729DF /* FirebaseManager.swift */; };
+		C51DFA371ECF9BC500C729DF /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DFA361ECF9BC500C729DF /* UIViewController+Alert.swift */; };
+		C527B6C01ED2123A00EC42A7 /* heart-rate-ekg-ecg-heart-beat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C527B6BF1ED2123A00EC42A7 /* heart-rate-ekg-ecg-heart-beat.jpg */; };
+		C527B6C41ED212D800EC42A7 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = C527B6C31ED212D800EC42A7 /* heart.png */; };
+		C527B6CC1ED3397900EC42A7 /* DAPageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C527B6C71ED3397900EC42A7 /* DAPageIndicatorView.m */; };
+		C527B6CD1ED3397900EC42A7 /* DAPagesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C527B6C91ED3397900EC42A7 /* DAPagesContainer.m */; };
+		C527B6CE1ED3397900EC42A7 /* DAPagesContainerTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C527B6CB1ED3397900EC42A7 /* DAPagesContainerTopBar.m */; };
+		C52D89DB1ECEA79F0088F7B2 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89CF1ECEA79F0088F7B2 /* AkiraTextField.swift */; };
+		C52D89DC1ECEA79F0088F7B2 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D01ECEA79F0088F7B2 /* HoshiTextField.swift */; };
+		C52D89DD1ECEA79F0088F7B2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C52D89D11ECEA79F0088F7B2 /* Info.plist */; };
+		C52D89DE1ECEA79F0088F7B2 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D21ECEA79F0088F7B2 /* IsaoTextField.swift */; };
+		C52D89DF1ECEA79F0088F7B2 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D31ECEA79F0088F7B2 /* JiroTextField.swift */; };
+		C52D89E01ECEA79F0088F7B2 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D41ECEA79F0088F7B2 /* KaedeTextField.swift */; };
+		C52D89E11ECEA79F0088F7B2 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D51ECEA79F0088F7B2 /* MadokaTextField.swift */; };
+		C52D89E21ECEA79F0088F7B2 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D61ECEA79F0088F7B2 /* MinoruTextField.swift */; };
+		C52D89E31ECEA79F0088F7B2 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D81ECEA79F0088F7B2 /* TextFieldEffects.swift */; };
+		C52D89E41ECEA79F0088F7B2 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D91ECEA79F0088F7B2 /* YokoTextField.swift */; };
+		C52D89E51ECEA79F0088F7B2 /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89DA1ECEA79F0088F7B2 /* YoshikoTextField.swift */; };
+		C557C1761ED1D25300DDE232 /* BLTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557C1751ED1D25300DDE232 /* BLTManager.swift */; };
+		C557C1781ED1FAF900DDE232 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557C1771ED1FAF900DDE232 /* MainViewController.swift */; };
 		C5CF6F821ECE3DB000D0A0B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF6F811ECE3DB000D0A0B3 /* AppDelegate.swift */; };
 		C5CF6F841ECE3DB000D0A0B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF6F831ECE3DB000D0A0B3 /* ViewController.swift */; };
 		C5CF6F871ECE3DB000D0A0B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CF6F851ECE3DB000D0A0B3 /* Main.storyboard */; };
 		C5CF6F8A1ECE3DB000D0A0B3 /* fitnessPro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5CF6F881ECE3DB000D0A0B3 /* fitnessPro.xcdatamodeld */; };
 		C5CF6F8C1ECE3DB000D0A0B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CF6F8B1ECE3DB000D0A0B3 /* Assets.xcassets */; };
 		C5CF6F8F1ECE3DB000D0A0B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CF6F8D1ECE3DB000D0A0B3 /* LaunchScreen.storyboard */; };
+		C5CF6F981ECE440A00D0A0B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5CF6F971ECE440A00D0A0B3 /* GoogleService-Info.plist */; };
+		C5CF70861ECE4EC600D0A0B3 /* plus_math1600.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70471ECE4EC600D0A0B3 /* plus_math1600.png */; };
+		C5CF70AB1ECE4EC600D0A0B3 /* UI8_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF707B1ECE4EC600D0A0B3 /* UI8_Logo.png */; };
+		C5CF70AC1ECE4EC600D0A0B3 /* profile-pictures.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF707C1ECE4EC600D0A0B3 /* profile-pictures.png */; };
+		C5CF70AD1ECE4EC600D0A0B3 /* facebook-app-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF707D1ECE4EC600D0A0B3 /* facebook-app-logo.png */; };
+		C5CF70AE1ECE4EC600D0A0B3 /* BG Image.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF707E1ECE4EC600D0A0B3 /* BG Image.png */; };
+		C5CF70AF1ECE4EC600D0A0B3 /* Facebook Button.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF707F1ECE4EC600D0A0B3 /* Facebook Button.png */; };
+		C5CF70B01ECE4EC600D0A0B3 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70801ECE4EC600D0A0B3 /* settings.png */; };
+		C5CF70B11ECE4EC600D0A0B3 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70811ECE4EC600D0A0B3 /* login.png */; };
+		C5CF70B21ECE4EC600D0A0B3 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70821ECE4EC600D0A0B3 /* camera.png */; };
+		C5CF70B31ECE4EC600D0A0B3 /* input line.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70831ECE4EC600D0A0B3 /* input line.png */; };
+		C5CF70B41ECE4EC600D0A0B3 /* signUp.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70841ECE4EC600D0A0B3 /* signUp.png */; };
+		C5CF70B51ECE4EC600D0A0B3 /* ButtonEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70851ECE4EC600D0A0B3 /* ButtonEmpty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12B023669F9A5A6CB031C2CF /* Pods_fitnessPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitnessPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17FAEFF7F17BFEE32D3344FD /* Pods-fitnessPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitnessPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitnessPro/Pods-fitnessPro.release.xcconfig"; sourceTree = "<group>"; };
+		3C08E8B2F96D5F52DD95A941 /* Pods-fitnessPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitnessPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitnessPro/Pods-fitnessPro.debug.xcconfig"; sourceTree = "<group>"; };
+		C51DFA271ECEAEC600C729DF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C51DFA291ECEBAF600C729DF /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = ../FirebaseManager.swift; sourceTree = "<group>"; };
+		C51DFA361ECF9BC500C729DF /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		C527B6BF1ED2123A00EC42A7 /* heart-rate-ekg-ecg-heart-beat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "heart-rate-ekg-ecg-heart-beat.jpg"; sourceTree = "<group>"; };
+		C527B6C31ED212D800EC42A7 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		C527B6C61ED3397900EC42A7 /* DAPageIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPageIndicatorView.h; sourceTree = "<group>"; };
+		C527B6C71ED3397900EC42A7 /* DAPageIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPageIndicatorView.m; sourceTree = "<group>"; };
+		C527B6C81ED3397900EC42A7 /* DAPagesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainer.h; sourceTree = "<group>"; };
+		C527B6C91ED3397900EC42A7 /* DAPagesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainer.m; sourceTree = "<group>"; };
+		C527B6CA1ED3397900EC42A7 /* DAPagesContainerTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainerTopBar.h; sourceTree = "<group>"; };
+		C527B6CB1ED3397900EC42A7 /* DAPagesContainerTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainerTopBar.m; sourceTree = "<group>"; };
+		C52D89CF1ECEA79F0088F7B2 /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
+		C52D89D01ECEA79F0088F7B2 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		C52D89D11ECEA79F0088F7B2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52D89D21ECEA79F0088F7B2 /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		C52D89D31ECEA79F0088F7B2 /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
+		C52D89D41ECEA79F0088F7B2 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		C52D89D51ECEA79F0088F7B2 /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
+		C52D89D61ECEA79F0088F7B2 /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
+		C52D89D71ECEA79F0088F7B2 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		C52D89D81ECEA79F0088F7B2 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		C52D89D91ECEA79F0088F7B2 /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
+		C52D89DA1ECEA79F0088F7B2 /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		C557C1751ED1D25300DDE232 /* BLTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLTManager.swift; sourceTree = "<group>"; };
+		C557C1771ED1FAF900DDE232 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C5CF6F7E1ECE3DB000D0A0B3 /* fitnessPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitnessPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CF6F811ECE3DB000D0A0B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5CF6F831ECE3DB000D0A0B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +87,20 @@
 		C5CF6F8B1ECE3DB000D0A0B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5CF6F8E1ECE3DB000D0A0B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5CF6F901ECE3DB000D0A0B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CF6F961ECE3DBF00D0A0B3 /* fitnessPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitnessPro.entitlements; sourceTree = "<group>"; };
+		C5CF6F971ECE440A00D0A0B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5CF70471ECE4EC600D0A0B3 /* plus_math1600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus_math1600.png; path = ../plus_math1600.png; sourceTree = "<group>"; };
+		C5CF707B1ECE4EC600D0A0B3 /* UI8_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UI8_Logo.png; path = ../UI8_Logo.png; sourceTree = "<group>"; };
+		C5CF707C1ECE4EC600D0A0B3 /* profile-pictures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile-pictures.png"; path = "../profile-pictures.png"; sourceTree = "<group>"; };
+		C5CF707D1ECE4EC600D0A0B3 /* facebook-app-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook-app-logo.png"; path = "../facebook-app-logo.png"; sourceTree = "<group>"; };
+		C5CF707E1ECE4EC600D0A0B3 /* BG Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Image.png"; path = "../BG Image.png"; sourceTree = "<group>"; };
+		C5CF707F1ECE4EC600D0A0B3 /* Facebook Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Facebook Button.png"; path = "../Facebook Button.png"; sourceTree = "<group>"; };
+		C5CF70801ECE4EC600D0A0B3 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = ../settings.png; sourceTree = "<group>"; };
+		C5CF70811ECE4EC600D0A0B3 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login.png; path = ../login.png; sourceTree = "<group>"; };
+		C5CF70821ECE4EC600D0A0B3 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = ../camera.png; sourceTree = "<group>"; };
+		C5CF70831ECE4EC600D0A0B3 /* input line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "input line.png"; path = "../input line.png"; sourceTree = "<group>"; };
+		C5CF70841ECE4EC600D0A0B3 /* signUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signUp.png; path = ../signUp.png; sourceTree = "<group>"; };
+		C5CF70851ECE4EC600D0A0B3 /* ButtonEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonEmpty.png; path = ../ButtonEmpty.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +108,86 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C27990B9CE438DA521215B /* Pods_fitnessPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F0079CEE0BBDBE58AFFD8C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C08E8B2F96D5F52DD95A941 /* Pods-fitnessPro.debug.xcconfig */,
+				17FAEFF7F17BFEE32D3344FD /* Pods-fitnessPro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C51DFA261ECEAE8500C729DF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C527B6BF1ED2123A00EC42A7 /* heart-rate-ekg-ecg-heart-beat.jpg */,
+				C527B6C31ED212D800EC42A7 /* heart.png */,
+				C5CF70471ECE4EC600D0A0B3 /* plus_math1600.png */,
+				C5CF707B1ECE4EC600D0A0B3 /* UI8_Logo.png */,
+				C5CF707C1ECE4EC600D0A0B3 /* profile-pictures.png */,
+				C5CF707D1ECE4EC600D0A0B3 /* facebook-app-logo.png */,
+				C5CF707E1ECE4EC600D0A0B3 /* BG Image.png */,
+				C5CF707F1ECE4EC600D0A0B3 /* Facebook Button.png */,
+				C5CF70801ECE4EC600D0A0B3 /* settings.png */,
+				C5CF70811ECE4EC600D0A0B3 /* login.png */,
+				C5CF70821ECE4EC600D0A0B3 /* camera.png */,
+				C5CF70831ECE4EC600D0A0B3 /* input line.png */,
+				C5CF70841ECE4EC600D0A0B3 /* signUp.png */,
+				C5CF70851ECE4EC600D0A0B3 /* ButtonEmpty.png */,
+			);
+			name = images;
+			path = fitnessPro;
+			sourceTree = "<group>";
+		};
+		C527B6C51ED3397900EC42A7 /* DAPagesContainer */ = {
+			isa = PBXGroup;
+			children = (
+				C527B6C61ED3397900EC42A7 /* DAPageIndicatorView.h */,
+				C527B6C71ED3397900EC42A7 /* DAPageIndicatorView.m */,
+				C527B6C81ED3397900EC42A7 /* DAPagesContainer.h */,
+				C527B6C91ED3397900EC42A7 /* DAPagesContainer.m */,
+				C527B6CA1ED3397900EC42A7 /* DAPagesContainerTopBar.h */,
+				C527B6CB1ED3397900EC42A7 /* DAPagesContainerTopBar.m */,
+			);
+			path = DAPagesContainer;
+			sourceTree = "<group>";
+		};
+		C52D89CE1ECEA79F0088F7B2 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				C52D89CF1ECEA79F0088F7B2 /* AkiraTextField.swift */,
+				C52D89D01ECEA79F0088F7B2 /* HoshiTextField.swift */,
+				C52D89D11ECEA79F0088F7B2 /* Info.plist */,
+				C52D89D21ECEA79F0088F7B2 /* IsaoTextField.swift */,
+				C52D89D31ECEA79F0088F7B2 /* JiroTextField.swift */,
+				C52D89D41ECEA79F0088F7B2 /* KaedeTextField.swift */,
+				C52D89D51ECEA79F0088F7B2 /* MadokaTextField.swift */,
+				C52D89D61ECEA79F0088F7B2 /* MinoruTextField.swift */,
+				C52D89D71ECEA79F0088F7B2 /* TextFieldEffects.h */,
+				C52D89D81ECEA79F0088F7B2 /* TextFieldEffects.swift */,
+				C52D89D91ECEA79F0088F7B2 /* YokoTextField.swift */,
+				C52D89DA1ECEA79F0088F7B2 /* YoshikoTextField.swift */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
 		C5CF6F751ECE3DB000D0A0B3 = {
 			isa = PBXGroup;
 			children = (
+				C527B6C51ED3397900EC42A7 /* DAPagesContainer */,
+				C51DFA261ECEAE8500C729DF /* images */,
+				C52D89CE1ECEA79F0088F7B2 /* TextFieldEffects */,
 				C5CF6F801ECE3DB000D0A0B3 /* fitnessPro */,
 				C5CF6F7F1ECE3DB000D0A0B3 /* Products */,
+				7F0079CEE0BBDBE58AFFD8C2 /* Pods */,
+				D5BBB5DC5B07A754EE275736 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +202,30 @@
 		C5CF6F801ECE3DB000D0A0B3 /* fitnessPro */ = {
 			isa = PBXGroup;
 			children = (
+				C51DFA291ECEBAF600C729DF /* FirebaseManager.swift */,
+				C5CF6F961ECE3DBF00D0A0B3 /* fitnessPro.entitlements */,
 				C5CF6F811ECE3DB000D0A0B3 /* AppDelegate.swift */,
 				C5CF6F831ECE3DB000D0A0B3 /* ViewController.swift */,
+				C51DFA361ECF9BC500C729DF /* UIViewController+Alert.swift */,
 				C5CF6F851ECE3DB000D0A0B3 /* Main.storyboard */,
+				C557C1771ED1FAF900DDE232 /* MainViewController.swift */,
+				C557C1751ED1D25300DDE232 /* BLTManager.swift */,
+				C51DFA271ECEAEC600C729DF /* SignUpViewController.swift */,
 				C5CF6F8B1ECE3DB000D0A0B3 /* Assets.xcassets */,
 				C5CF6F8D1ECE3DB000D0A0B3 /* LaunchScreen.storyboard */,
 				C5CF6F901ECE3DB000D0A0B3 /* Info.plist */,
+				C5CF6F971ECE440A00D0A0B3 /* GoogleService-Info.plist */,
 				C5CF6F881ECE3DB000D0A0B3 /* fitnessPro.xcdatamodeld */,
 			);
 			path = fitnessPro;
+			sourceTree = "<group>";
+		};
+		D5BBB5DC5B07A754EE275736 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12B023669F9A5A6CB031C2CF /* Pods_fitnessPro.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5CF6F931ECE3DB000D0A0B3 /* Build configuration list for PBXNativeTarget "fitnessPro" */;
 			buildPhases = (
+				C6705393937D58C7814FD46E /* [CP] Check Pods Manifest.lock */,
 				C5CF6F7A1ECE3DB000D0A0B3 /* Sources */,
 				C5CF6F7B1ECE3DB000D0A0B3 /* Frameworks */,
 				C5CF6F7C1ECE3DB000D0A0B3 /* Resources */,
+				F32F72FB3B585798E88B6173 /* [CP] Embed Pods Frameworks */,
+				1834FCB7C49DB65F27062CC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,7 +263,13 @@
 				TargetAttributes = {
 					C5CF6F7D1ECE3DB000D0A0B3 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = RQAE768Z9N;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -126,22 +296,104 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CF70AC1ECE4EC600D0A0B3 /* profile-pictures.png in Resources */,
+				C5CF70B11ECE4EC600D0A0B3 /* login.png in Resources */,
 				C5CF6F8F1ECE3DB000D0A0B3 /* LaunchScreen.storyboard in Resources */,
+				C5CF70B51ECE4EC600D0A0B3 /* ButtonEmpty.png in Resources */,
+				C527B6C41ED212D800EC42A7 /* heart.png in Resources */,
+				C5CF70AF1ECE4EC600D0A0B3 /* Facebook Button.png in Resources */,
 				C5CF6F8C1ECE3DB000D0A0B3 /* Assets.xcassets in Resources */,
+				C5CF70AE1ECE4EC600D0A0B3 /* BG Image.png in Resources */,
+				C5CF70861ECE4EC600D0A0B3 /* plus_math1600.png in Resources */,
+				C5CF70B41ECE4EC600D0A0B3 /* signUp.png in Resources */,
+				C5CF70AD1ECE4EC600D0A0B3 /* facebook-app-logo.png in Resources */,
+				C52D89DD1ECEA79F0088F7B2 /* Info.plist in Resources */,
+				C5CF70B01ECE4EC600D0A0B3 /* settings.png in Resources */,
+				C5CF70B21ECE4EC600D0A0B3 /* camera.png in Resources */,
+				C5CF6F981ECE440A00D0A0B3 /* GoogleService-Info.plist in Resources */,
+				C5CF70B31ECE4EC600D0A0B3 /* input line.png in Resources */,
+				C527B6C01ED2123A00EC42A7 /* heart-rate-ekg-ecg-heart-beat.jpg in Resources */,
 				C5CF6F871ECE3DB000D0A0B3 /* Main.storyboard in Resources */,
+				C5CF70AB1ECE4EC600D0A0B3 /* UI8_Logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1834FCB7C49DB65F27062CC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fitnessPro/Pods-fitnessPro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6705393937D58C7814FD46E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F32F72FB3B585798E88B6173 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fitnessPro/Pods-fitnessPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5CF6F7A1ECE3DB000D0A0B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52D89DB1ECEA79F0088F7B2 /* AkiraTextField.swift in Sources */,
 				C5CF6F841ECE3DB000D0A0B3 /* ViewController.swift in Sources */,
+				C52D89E01ECEA79F0088F7B2 /* KaedeTextField.swift in Sources */,
+				C52D89E51ECEA79F0088F7B2 /* YoshikoTextField.swift in Sources */,
+				C52D89E31ECEA79F0088F7B2 /* TextFieldEffects.swift in Sources */,
+				C52D89E11ECEA79F0088F7B2 /* MadokaTextField.swift in Sources */,
+				C52D89E41ECEA79F0088F7B2 /* YokoTextField.swift in Sources */,
+				C557C1761ED1D25300DDE232 /* BLTManager.swift in Sources */,
+				C51DFA371ECF9BC500C729DF /* UIViewController+Alert.swift in Sources */,
+				C527B6CD1ED3397900EC42A7 /* DAPagesContainer.m in Sources */,
 				C5CF6F821ECE3DB000D0A0B3 /* AppDelegate.swift in Sources */,
+				C51DFA281ECEAEC600C729DF /* SignUpViewController.swift in Sources */,
+				C52D89DE1ECEA79F0088F7B2 /* IsaoTextField.swift in Sources */,
 				C5CF6F8A1ECE3DB000D0A0B3 /* fitnessPro.xcdatamodeld in Sources */,
+				C52D89E21ECEA79F0088F7B2 /* MinoruTextField.swift in Sources */,
+				C51DFA2A1ECEBAF600C729DF /* FirebaseManager.swift in Sources */,
+				C527B6CE1ED3397900EC42A7 /* DAPagesContainerTopBar.m in Sources */,
+				C527B6CC1ED3397900EC42A7 /* DAPageIndicatorView.m in Sources */,
+				C557C1781ED1FAF900DDE232 /* MainViewController.swift in Sources */,
+				C52D89DC1ECEA79F0088F7B2 /* HoshiTextField.swift in Sources */,
+				C52D89DF1ECEA79F0088F7B2 /* JiroTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,24 +516,32 @@
 		};
 		C5CF6F941ECE3DB000D0A0B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C08E8B2F96D5F52DD95A941 /* Pods-fitnessPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fitnessPro/fitnessPro.entitlements;
+				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = fitnessPro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.chen.fitnessPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mAc.RJTHealthAndFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		C5CF6F951ECE3DB000D0A0B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17FAEFF7F17BFEE32D3344FD /* Pods-fitnessPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fitnessPro/fitnessPro.entitlements;
+				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = fitnessPro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.chen.fitnessPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mAc.RJTHealthAndFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -305,6 +565,7 @@
 				C5CF6F951ECE3DB000D0A0B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

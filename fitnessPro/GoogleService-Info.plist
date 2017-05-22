@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>80622612599-edlj725kiet1tnmjmli4pm5otu32cji0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.80622612599-edlj725kiet1tnmjmli4pm5otu32cji0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCnp6nX5We_m2S7M15_tVjbI4jCXYKWfew</string>
+	<key>GCM_SENDER_ID</key>
+	<string>80622612599</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mAc.RJTHealthAndFitness</string>
+	<key>PROJECT_ID</key>
+	<string>fitnesspro-c44ec</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fitnesspro-c44ec.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:80622612599:ios:1437529251b1ddcd</string>
+	<key>DATABASE_URL</key>
+	<string>https://fitnesspro-c44ec.firebaseio.com</string>
+</dict>
+</plist>
