@@ -59,10 +59,10 @@ import UIKit
         }
     }
     
-    private let borderThickness: (active: CGFloat, inactive: CGFloat) = (4, 2)
-    private let placeholderInsets = CGPoint(x: 6, y: 6)
-    private let textFieldInsets = CGPoint(x: 6, y: 6)
-    private let borderLayer = CALayer()
+    fileprivate let borderThickness: (active: CGFloat, inactive: CGFloat) = (4, 2)
+    fileprivate let placeholderInsets = CGPoint(x: 6, y: 6)
+    fileprivate let textFieldInsets = CGPoint(x: 6, y: 6)
+    fileprivate let borderLayer = CALayer()
     
     // MARK: - TextFieldEffects
     
@@ -95,12 +95,12 @@ import UIKit
     
     // MARK: - Private
     
-    private func updateBorder() {
+    fileprivate func updateBorder() {
         borderLayer.frame = rectForBorder(frame)
         borderLayer.backgroundColor = isFirstResponder ? activeColor?.cgColor : inactiveColor?.cgColor
     }
     
-    private func updatePlaceholder() {
+    fileprivate func updatePlaceholder() {
         placeholderLabel.text = placeholder
         placeholderLabel.textColor = inactiveColor
         placeholderLabel.sizeToFit()
@@ -111,12 +111,12 @@ import UIKit
         }
     }
     
-    private func placeholderFontFromFont(_ font: UIFont) -> UIFont! {
+    fileprivate func placeholderFontFromFont(_ font: UIFont) -> UIFont! {
         let smallerFont = UIFont(name: font.fontName, size: font.pointSize * placeholderFontScale)
         return smallerFont
     }
     
-    private func rectForBorder(_ bounds: CGRect) -> CGRect {
+    fileprivate func rectForBorder(_ bounds: CGRect) -> CGRect {
         var newRect:CGRect
         
         if isFirstResponder {
@@ -128,7 +128,7 @@ import UIKit
         return newRect
     }
     
-    private func layoutPlaceholderInTextRect() {
+    fileprivate func layoutPlaceholderInTextRect() {
         let textRect = self.textRect(forBounds: bounds)
         var originX = textRect.origin.x
         switch textAlignment {
@@ -143,7 +143,7 @@ import UIKit
             width: placeholderLabel.frame.size.width, height: placeholderLabel.frame.size.height)
     }
     
-    private func performPlaceholderAnimationWithColor(_ color: UIColor) {
+    fileprivate func performPlaceholderAnimationWithColor(_ color: UIColor) {
         
         let yOffset: CGFloat = 4
         

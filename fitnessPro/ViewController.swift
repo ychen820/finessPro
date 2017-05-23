@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var emailTextfield: YoshikoTextField!
     @IBOutlet weak var passwordTextfield: YoshikoTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +25,9 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
     @IBAction func fBLogin(_ sender: UIButton) {
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
@@ -60,7 +63,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func emailLogin(_ sender: UIButton) {
-        if let tabCon = self.storyboard?.instantiateViewController(withIdentifier: "mainTab"){
+        if let tabCon = self.storyboard?.instantiateViewController(withIdentifier: "pageController"){
             self.present(tabCon, animated: true, completion: nil)
             /*
              guard let email = emailTextfield.text else { return  }

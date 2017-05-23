@@ -37,13 +37,13 @@ class SignUpViewController: UIViewController {
         }
         if !isEmpty {
             if confirmTextfield.text != passwordTextfield.text{
-                self.showAlert(message: "Please Confirm Password", title: "Sign Up Error", comlete: nil)
+                self.showAlert("Please Confirm Password", title: "Sign Up Error", comlete: nil)
                 return
             }
             if let email = emailTextfield.text,  let password = passwordTextfield.text, let name=nameTextfield.text {
                 Auth.auth().createUser(withEmail: email, password: password, completion: { (user, err) in
                     if let err = err{
-                        self.showAlert(message: err.localizedDescription, title: "Sign Up Error", comlete: nil)
+                        self.showAlert(err.localizedDescription, title: "Sign Up Error", comlete: nil)
                     }
                     else{
                     if let userID = user?.uid{
@@ -60,6 +60,10 @@ class SignUpViewController: UIViewController {
 
     @IBAction func backButtonAction(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+        
     }
     
     /*

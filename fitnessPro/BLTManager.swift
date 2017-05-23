@@ -11,16 +11,18 @@ import CoreBluetooth
 enum Services: String {
     case heartMonitor = "CE4CFF01-B85D-49AA-8E03-0D34779A6EEF"
     case stepsMonitor = "3E18B512-D819-4550-8343-F9EFFDA2F896"
-    //    case pairingService = "4B5CF42E-3224-43B4-AFA2-8A0917B34856"
+    case temperatureMonitor = "4B5CF42E-3224-43B4-AFA2-8A0917B34856"
 }
+
 enum Characteristics: String {
     case heartRate = "7821C91E-A551-4907-A5E0-F6CB64AC0A4B"
     case stepsCount = "EE6134CF-F907-45CD-B259-2AB681CA6B32"
-    //    case pairingCharacteristic = "2BCE8CF5-F03E-4EB2-BB35-77C87AC5F1A4"
+    case temperatureStat = "2BCE8CF5-F03E-4EB2-BB35-77C87AC5F1A4"
 }
+
 protocol BLTManagerDelegate {
-    func didGetStep(step : String)
-    func didGetHeartRate (heartRate : String)
+    func didGetStep(_ step : String)
+    func didGetHeartRate (_ heartRate : String)
 }
 class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
     
@@ -28,6 +30,7 @@ class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
     var myPeripheral : CBPeripheral?
     var heartMonitorCharacteristic : CBCharacteristic?
     var stepsCharacteristic : CBCharacteristic?
+    var temperaturCharacteristic : CBCharacteristic?
     var uiDelegate : BLTManagerDelegate?
     static let shareInstance : BLTManager = {
         let instance = BLTManager()
@@ -71,6 +74,10 @@ class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
                 print("Found steps monitor service")
                 peripheral.discoverCharacteristics(nil, for: service)
             }
+            if service.uuid.uuidString == Services.temperatureMonitor.rawValue{
+                print("Found temperature monitor service")
+                peripheral.discoverCharacteristics(nil, for: service)
+            }
         }
     }
     func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) {
@@ -83,6 +90,7 @@ class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
     }
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         print("disconnected")
+        central.scanForPeripherals(withServices: nil, options: nil)
     }
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         for characteris in service.characteristics!{
@@ -94,20 +102,25 @@ class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
                 stepsCharacteristic = characteris
                 getSteps()
             }
+            if characteris.uuid.uuidString == Characteristics.temperatureStat.rawValue{
+                temperaturCharacteristic = characteris
+                getTemperature()
+            }
+
         }
     }
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if characteristic == stepsCharacteristic! {
             if let value = characteristic.value {
                 let s = String(bytes: value, encoding: .utf8)
-                self.uiDelegate?.didGetStep(step: s ?? "")
+                self.uiDelegate?.didGetStep(s ?? "")
                 print("Steps count:", s ?? "")
             }
         }
         if characteristic == heartMonitorCharacteristic{
             if let value = characteristic.value {
                 let s = String(bytes: value, encoding: .utf8)
-                self.uiDelegate?.didGetHeartRate(heartRate: s ?? "")
+                self.uiDelegate?.didGetHeartRate(s ?? "")
                 print("Heart Rate:", s ?? "")
                 
             }
@@ -115,5 +128,8 @@ class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
     }
     func getSteps() {
         myPeripheral?.readValue(for: stepsCharacteristic!)
+    }
+    func getTemperature() {
+        myPeripheral?.readValue(for: heartMonitorCharacteristic!)
     }
 }

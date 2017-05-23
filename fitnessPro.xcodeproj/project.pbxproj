@@ -16,6 +16,14 @@
 		C527B6CC1ED3397900EC42A7 /* DAPageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C527B6C71ED3397900EC42A7 /* DAPageIndicatorView.m */; };
 		C527B6CD1ED3397900EC42A7 /* DAPagesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C527B6C91ED3397900EC42A7 /* DAPagesContainer.m */; };
 		C527B6CE1ED3397900EC42A7 /* DAPagesContainerTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C527B6CB1ED3397900EC42A7 /* DAPagesContainerTopBar.m */; };
+		C527B6D11ED33E4400EC42A7 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527B6D01ED33E4400EC42A7 /* CustomPageViewController.swift */; };
+		C527B6D71ED36BAE00EC42A7 /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527B6D61ED36BAE00EC42A7 /* StepViewController.swift */; };
+		C527B6E41ED3EEE400EC42A7 /* Step+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527B6DE1ED3EEE400EC42A7 /* Step+CoreDataClass.swift */; };
+		C527B6E51ED3EEE400EC42A7 /* Step+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527B6DF1ED3EEE400EC42A7 /* Step+CoreDataProperties.swift */; };
+		C527B6E61ED3EEE400EC42A7 /* Heartrate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527B6E01ED3EEE400EC42A7 /* Heartrate+CoreDataClass.swift */; };
+		C527B6E71ED3EEE400EC42A7 /* Heartrate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527B6E11ED3EEE400EC42A7 /* Heartrate+CoreDataProperties.swift */; };
+		C527B6E81ED3EEE400EC42A7 /* DailyGoal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527B6E21ED3EEE400EC42A7 /* DailyGoal+CoreDataClass.swift */; };
+		C527B6E91ED3EEE400EC42A7 /* DailyGoal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527B6E31ED3EEE400EC42A7 /* DailyGoal+CoreDataProperties.swift */; };
 		C52D89DB1ECEA79F0088F7B2 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89CF1ECEA79F0088F7B2 /* AkiraTextField.swift */; };
 		C52D89DC1ECEA79F0088F7B2 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D89D01ECEA79F0088F7B2 /* HoshiTextField.swift */; };
 		C52D89DD1ECEA79F0088F7B2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C52D89D11ECEA79F0088F7B2 /* Info.plist */; };
@@ -48,6 +56,9 @@
 		C5CF70B31ECE4EC600D0A0B3 /* input line.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70831ECE4EC600D0A0B3 /* input line.png */; };
 		C5CF70B41ECE4EC600D0A0B3 /* signUp.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70841ECE4EC600D0A0B3 /* signUp.png */; };
 		C5CF70B51ECE4EC600D0A0B3 /* ButtonEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = C5CF70851ECE4EC600D0A0B3 /* ButtonEmpty.png */; };
+		C5E2314C1ED4827B0092F898 /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2314B1ED4827B0092F898 /* ScrollableGraphView.swift */; };
+		C5E2314E1ED48C500092F898 /* ScrollableGraphView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2314D1ED48C500092F898 /* ScrollableGraphView+Styles.swift */; };
+		C5E231501ED48D020092F898 /* UIColor+colorFromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2314F1ED48D020092F898 /* UIColor+colorFromHex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +76,15 @@
 		C527B6C91ED3397900EC42A7 /* DAPagesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainer.m; sourceTree = "<group>"; };
 		C527B6CA1ED3397900EC42A7 /* DAPagesContainerTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainerTopBar.h; sourceTree = "<group>"; };
 		C527B6CB1ED3397900EC42A7 /* DAPagesContainerTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainerTopBar.m; sourceTree = "<group>"; };
+		C527B6CF1ED33C0700EC42A7 /* fitnessPro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fitnessPro-Bridging-Header.h"; sourceTree = "<group>"; };
+		C527B6D01ED33E4400EC42A7 /* CustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		C527B6D61ED36BAE00EC42A7 /* StepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
+		C527B6DE1ED3EEE400EC42A7 /* Step+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Step+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C527B6DF1ED3EEE400EC42A7 /* Step+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Step+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C527B6E01ED3EEE400EC42A7 /* Heartrate+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Heartrate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C527B6E11ED3EEE400EC42A7 /* Heartrate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Heartrate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C527B6E21ED3EEE400EC42A7 /* DailyGoal+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DailyGoal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C527B6E31ED3EEE400EC42A7 /* DailyGoal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DailyGoal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C52D89CF1ECEA79F0088F7B2 /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
 		C52D89D01ECEA79F0088F7B2 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
 		C52D89D11ECEA79F0088F7B2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +121,9 @@
 		C5CF70831ECE4EC600D0A0B3 /* input line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "input line.png"; path = "../input line.png"; sourceTree = "<group>"; };
 		C5CF70841ECE4EC600D0A0B3 /* signUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signUp.png; path = ../signUp.png; sourceTree = "<group>"; };
 		C5CF70851ECE4EC600D0A0B3 /* ButtonEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonEmpty.png; path = ../ButtonEmpty.png; sourceTree = "<group>"; };
+		C5E2314B1ED4827B0092F898 /* ScrollableGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphView.swift; sourceTree = "<group>"; };
+		C5E2314D1ED48C500092F898 /* ScrollableGraphView+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollableGraphView+Styles.swift"; sourceTree = "<group>"; };
+		C5E2314F1ED48D020092F898 /* UIColor+colorFromHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colorFromHex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +182,19 @@
 			path = DAPagesContainer;
 			sourceTree = "<group>";
 		};
+		C527B6EA1ED3EEF100EC42A7 /* CoredDataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C527B6DE1ED3EEE400EC42A7 /* Step+CoreDataClass.swift */,
+				C527B6DF1ED3EEE400EC42A7 /* Step+CoreDataProperties.swift */,
+				C527B6E01ED3EEE400EC42A7 /* Heartrate+CoreDataClass.swift */,
+				C527B6E11ED3EEE400EC42A7 /* Heartrate+CoreDataProperties.swift */,
+				C527B6E21ED3EEE400EC42A7 /* DailyGoal+CoreDataClass.swift */,
+				C527B6E31ED3EEE400EC42A7 /* DailyGoal+CoreDataProperties.swift */,
+			);
+			name = CoredDataClasses;
+			sourceTree = "<group>";
+		};
 		C52D89CE1ECEA79F0088F7B2 /* TextFieldEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +217,11 @@
 		C5CF6F751ECE3DB000D0A0B3 = {
 			isa = PBXGroup;
 			children = (
+				C5E2314B1ED4827B0092F898 /* ScrollableGraphView.swift */,
+				C5E2314D1ED48C500092F898 /* ScrollableGraphView+Styles.swift */,
+				C527B6CF1ED33C0700EC42A7 /* fitnessPro-Bridging-Header.h */,
+				C5E2314F1ED48D020092F898 /* UIColor+colorFromHex.swift */,
+				C527B6EA1ED3EEF100EC42A7 /* CoredDataClasses */,
 				C527B6C51ED3397900EC42A7 /* DAPagesContainer */,
 				C51DFA261ECEAE8500C729DF /* images */,
 				C52D89CE1ECEA79F0088F7B2 /* TextFieldEffects */,
@@ -208,6 +249,8 @@
 				C5CF6F831ECE3DB000D0A0B3 /* ViewController.swift */,
 				C51DFA361ECF9BC500C729DF /* UIViewController+Alert.swift */,
 				C5CF6F851ECE3DB000D0A0B3 /* Main.storyboard */,
+				C527B6D01ED33E4400EC42A7 /* CustomPageViewController.swift */,
+				C527B6D61ED36BAE00EC42A7 /* StepViewController.swift */,
 				C557C1771ED1FAF900DDE232 /* MainViewController.swift */,
 				C557C1751ED1D25300DDE232 /* BLTManager.swift */,
 				C51DFA271ECEAEC600C729DF /* SignUpViewController.swift */,
@@ -264,6 +307,7 @@
 					C5CF6F7D1ECE3DB000D0A0B3 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RQAE768Z9N;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -373,26 +417,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C527B6E71ED3EEE400EC42A7 /* Heartrate+CoreDataProperties.swift in Sources */,
 				C52D89DB1ECEA79F0088F7B2 /* AkiraTextField.swift in Sources */,
+				C527B6E81ED3EEE400EC42A7 /* DailyGoal+CoreDataClass.swift in Sources */,
+				C527B6E51ED3EEE400EC42A7 /* Step+CoreDataProperties.swift in Sources */,
+				C5E2314C1ED4827B0092F898 /* ScrollableGraphView.swift in Sources */,
 				C5CF6F841ECE3DB000D0A0B3 /* ViewController.swift in Sources */,
 				C52D89E01ECEA79F0088F7B2 /* KaedeTextField.swift in Sources */,
 				C52D89E51ECEA79F0088F7B2 /* YoshikoTextField.swift in Sources */,
 				C52D89E31ECEA79F0088F7B2 /* TextFieldEffects.swift in Sources */,
 				C52D89E11ECEA79F0088F7B2 /* MadokaTextField.swift in Sources */,
 				C52D89E41ECEA79F0088F7B2 /* YokoTextField.swift in Sources */,
+				C5E2314E1ED48C500092F898 /* ScrollableGraphView+Styles.swift in Sources */,
 				C557C1761ED1D25300DDE232 /* BLTManager.swift in Sources */,
 				C51DFA371ECF9BC500C729DF /* UIViewController+Alert.swift in Sources */,
 				C527B6CD1ED3397900EC42A7 /* DAPagesContainer.m in Sources */,
 				C5CF6F821ECE3DB000D0A0B3 /* AppDelegate.swift in Sources */,
 				C51DFA281ECEAEC600C729DF /* SignUpViewController.swift in Sources */,
+				C527B6D71ED36BAE00EC42A7 /* StepViewController.swift in Sources */,
 				C52D89DE1ECEA79F0088F7B2 /* IsaoTextField.swift in Sources */,
 				C5CF6F8A1ECE3DB000D0A0B3 /* fitnessPro.xcdatamodeld in Sources */,
+				C527B6D11ED33E4400EC42A7 /* CustomPageViewController.swift in Sources */,
+				C5E231501ED48D020092F898 /* UIColor+colorFromHex.swift in Sources */,
 				C52D89E21ECEA79F0088F7B2 /* MinoruTextField.swift in Sources */,
+				C527B6E91ED3EEE400EC42A7 /* DailyGoal+CoreDataProperties.swift in Sources */,
 				C51DFA2A1ECEBAF600C729DF /* FirebaseManager.swift in Sources */,
 				C527B6CE1ED3397900EC42A7 /* DAPagesContainerTopBar.m in Sources */,
+				C527B6E41ED3EEE400EC42A7 /* Step+CoreDataClass.swift in Sources */,
 				C527B6CC1ED3397900EC42A7 /* DAPageIndicatorView.m in Sources */,
 				C557C1781ED1FAF900DDE232 /* MainViewController.swift in Sources */,
 				C52D89DC1ECEA79F0088F7B2 /* HoshiTextField.swift in Sources */,
+				C527B6E61ED3EEE400EC42A7 /* Heartrate+CoreDataClass.swift in Sources */,
 				C52D89DF1ECEA79F0088F7B2 /* JiroTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +580,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mAc.RJTHealthAndFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "fitnessPro-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
@@ -541,6 +597,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mAc.RJTHealthAndFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "fitnessPro-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};

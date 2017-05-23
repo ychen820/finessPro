@@ -58,9 +58,9 @@ import UIKit
         }
     }
     
-    private let foregroundView = UIView()
-    private let placeholderInsets = CGPoint(x: 10, y: 5)
-    private let textFieldInsets = CGPoint(x: 10, y: 0)
+    fileprivate let foregroundView = UIView()
+    fileprivate let placeholderInsets = CGPoint(x: 10, y: 5)
+    fileprivate let textFieldInsets = CGPoint(x: 10, y: 0)
         
     // MARK: - TextFieldEffects
 
@@ -119,16 +119,16 @@ import UIKit
     
     // MARK: - Private
     
-    private func updateForegroundColor() {
+    fileprivate func updateForegroundColor() {
         foregroundView.backgroundColor = foregroundColor
     }
     
-    private func updatePlaceholder() {
+    fileprivate func updatePlaceholder() {
         placeholderLabel.text = placeholder
         placeholderLabel.textColor = placeholderColor
     }
     
-    private func placeholderFontFromFont(_ font: UIFont) -> UIFont! {
+    fileprivate func placeholderFontFromFont(_ font: UIFont) -> UIFont! {
         let smallerFont = UIFont(name: font.fontName, size: font.pointSize * placeholderFontScale)
         return smallerFont
     }

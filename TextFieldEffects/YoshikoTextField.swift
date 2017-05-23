@@ -13,9 +13,9 @@ import UIKit
  */
 @IBDesignable open class YoshikoTextField: TextFieldEffects {
 
-    private let borderLayer = CALayer()
-    private let textFieldInsets = CGPoint(x: 6, y: 0)
-    private let placeHolderInsets = CGPoint(x: 6, y: 0)
+    fileprivate let borderLayer = CALayer()
+    fileprivate let textFieldInsets = CGPoint(x: 6, y: 0)
+    fileprivate let placeHolderInsets = CGPoint(x: 6, y: 0)
     
     /**
      The size of the border.
@@ -95,13 +95,13 @@ import UIKit
 
     // MARK: Private 
 
-    private func updateBorder() {
+    fileprivate func updateBorder() {
         borderLayer.frame = rectForBounds(bounds)
         borderLayer.borderWidth = borderSize
         borderLayer.borderColor = (isFirstResponder || text!.isNotEmpty) ? activeBorderColor.cgColor : inactiveBorderColor.cgColor
     }
 
-    private func updateBackground() {
+    fileprivate func updateBackground() {
         if isFirstResponder || text!.isNotEmpty {
             borderLayer.backgroundColor = activeBackgroundColor.cgColor
         } else {
@@ -109,35 +109,35 @@ import UIKit
         }
     }
 
-    private func updatePlaceholder() {
+    fileprivate func updatePlaceholder() {
         placeholderLabel.frame = placeholderRect(forBounds: bounds)
         placeholderLabel.text = placeholder
         placeholderLabel.textAlignment = textAlignment
 
         if isFirstResponder || text!.isNotEmpty {
-            placeholderLabel.font = placeholderFontFromFontAndPercentageOfOriginalSize(font: font!, percentageOfOriginalSize: placeholderFontScale * 0.8)
+            placeholderLabel.font = placeholderFontFromFontAndPercentageOfOriginalSize(font!, percentageOfOriginalSize: placeholderFontScale * 0.8)
             placeholderLabel.text = placeholder?.uppercased()
             placeholderLabel.textColor = activeBorderColor
         } else {
-            placeholderLabel.font = placeholderFontFromFontAndPercentageOfOriginalSize(font: font!, percentageOfOriginalSize: placeholderFontScale)
+            placeholderLabel.font = placeholderFontFromFontAndPercentageOfOriginalSize(font!, percentageOfOriginalSize: placeholderFontScale)
             placeholderLabel.textColor = placeholderColor
         }
     }
 
-    private func placeholderFontFromFontAndPercentageOfOriginalSize(font: UIFont, percentageOfOriginalSize: CGFloat) -> UIFont! {
+    fileprivate func placeholderFontFromFontAndPercentageOfOriginalSize(_ font: UIFont, percentageOfOriginalSize: CGFloat) -> UIFont! {
         let smallerFont = UIFont(name: font.fontName, size: font.pointSize * percentageOfOriginalSize)
         return smallerFont
     }
 
-    private func rectForBounds(_ bounds: CGRect) -> CGRect {
+    fileprivate func rectForBounds(_ bounds: CGRect) -> CGRect {
         return CGRect(x: bounds.origin.x, y: bounds.origin.y + placeholderHeight, width: bounds.size.width, height: bounds.size.height - placeholderHeight)
     }
 
-    private var placeholderHeight : CGFloat {
-        return placeHolderInsets.y + placeholderFontFromFontAndPercentageOfOriginalSize(font: font!, percentageOfOriginalSize: placeholderFontScale).lineHeight
+    fileprivate var placeholderHeight : CGFloat {
+        return placeHolderInsets.y + placeholderFontFromFontAndPercentageOfOriginalSize(font!, percentageOfOriginalSize: placeholderFontScale).lineHeight
     }
     
-    private func animateViews() {
+    fileprivate func animateViews() {
         UIView.animate(withDuration: 0.2, animations: {
             // Prevents a "flash" in the placeholder
             if self.text!.isEmpty {
