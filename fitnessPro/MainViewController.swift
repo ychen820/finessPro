@@ -24,7 +24,6 @@ class MainViewController: UIViewController,BLTManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         bltManager = BLTManager.shareInstance
-        bltManager?.uiDelegate = self
         tabBarController?.tabBar.tintColor = UIColor.red
         heartCircleView.layer.cornerRadius = heartCircleView.frame.width/2
         heartCircleView.layer.borderColor = UIColor.red.cgColor
@@ -38,9 +37,13 @@ class MainViewController: UIViewController,BLTManagerDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        bltManager?.uiDelegate = self
+        bltManager?.getSteps()
+        print(bltManager?.description)
         fetchHeartRateData()
     }
     func didGetStep(_ step: String) {
+        print(step)
     }
 
     func fetchHeartRateData(){
@@ -52,7 +55,7 @@ class MainViewController: UIViewController,BLTManagerDelegate {
                 let result = try backGroundContext.fetch(fetchRequest)
                 for item in result{
                     if let timeDescri = item.timestamp?.description {
-                   print("HeartRate:\(item.heartrate),timeStamp:\(timeDescri)")
+                 //  print("HeartRate:\(item.heartrate),timeStamp:\(timeDescri)")
                     }
                 }
                 let heartData = result.map{heartModel in Double(heartModel.heartrate)}
@@ -63,7 +66,6 @@ class MainViewController: UIViewController,BLTManagerDelegate {
                     let graphView = ScrollableGraphView(frame: self.graphView.frame)
                     graphView.smoothDarkSetup()
                     graphView.set(heartData, withLabels: heartLabel)
-                    
                     self.view .addSubview(graphView)
                 }
                 
@@ -74,19 +76,6 @@ class MainViewController: UIViewController,BLTManagerDelegate {
                 fatalError("failed to fetch heartrate \(err) ")
             }
         })
-
-//        do{
-//            if let result = try ad?.persistentContainer.viewContext.fetch(fetchRequest){
-//            for heartRate in result{
-//                print("Heartrate:\(heartRate.heartrate) timeStamp:\(String(describing: heartRate.timestamp?.description))")
-//            }
-//            }
-//         }
-//        catch{
-//            let err = error as NSError
-//            fatalError("Unresolved error \(err), \(err.userInfo)")
-//        }
-    
         
         
     }
@@ -120,6 +109,10 @@ class MainViewController: UIViewController,BLTManagerDelegate {
 //        pulseTime = Timer.scheduledTimer(timeInterval: 60 / heartRateNumber! , target: self, selector: #selector(doHeartBeat), userInfo: nil, repeats: false)
 //        }
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("ddf")
     }
     /*
     // MARK: - Navigation

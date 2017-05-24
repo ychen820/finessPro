@@ -11,6 +11,7 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'GoogleSignIn'
+pod 'MKRingProgressView'
   # Pods for fitnessPro
 
 end

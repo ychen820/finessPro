@@ -406,10 +406,10 @@
             </objects>
             <point key="canvasLocation" x="2392.8000000000002" y="616.64167916041981"/>
         </scene>
-        <!--Step View Controller-->
+        <!--Step Monitor-->
         <scene sceneID="NHM-jk-yMw">
             <objects>
-                <viewController storyboardIdentifier="secondView" id="GNY-GN-Dgd" customClass="StepViewController" customModule="fitnessPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stepView" title="Step Monitor" id="GNY-GN-Dgd" customClass="StepViewController" customModule="fitnessPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pve-BF-TMB"/>
                         <viewControllerLayoutGuide type="bottom" id="PrJ-6e-P9J"/>
@@ -418,16 +418,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pz-nG-FWG">
-                                <rect key="frame" x="166" y="273" width="42" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eaq-CY-LZx">
+                                <rect key="frame" x="87" y="130" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="MNO-24-gjy"/>
+                                    <constraint firstAttribute="width" secondItem="Eaq-CY-LZx" secondAttribute="height" multiplier="1:1" id="d3b-4b-ufy"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqX-Fa-Nz8">
+                                <rect key="frame" x="164" y="437" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="GNY-GN-Dgd" eventType="touchUpInside" id="cZs-co-usu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eaq-CY-LZx" firstAttribute="top" secondItem="Pve-BF-TMB" secondAttribute="bottom" constant="110" id="TFq-5p-VOp"/>
+                            <constraint firstItem="Eaq-CY-LZx" firstAttribute="centerX" secondItem="Bte-SD-2Uf" secondAttribute="centerX" id="vCT-Kk-voW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="Eaq-CY-LZx" id="b34-T2-MdW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fl7-yI-ric" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

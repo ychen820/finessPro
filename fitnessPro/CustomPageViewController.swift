@@ -27,12 +27,9 @@ var pageContainer = DAPagesContainer()
             return
         }
         
-        guard let someOtherControler = storyboard?.instantiateViewController(withIdentifier: "secondView") else{
+        guard let someOtherControler = storyboard?.instantiateViewController(withIdentifier: "stepView") else{
             return
         }
-        
-        someOtherControler.title = "SomeTitle"
-        
         controllers.append(heartRateController)
         controllers.append(someOtherControler)
         

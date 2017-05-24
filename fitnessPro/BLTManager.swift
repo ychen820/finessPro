@@ -26,110 +26,129 @@ protocol BLTManagerDelegate {
 }
 class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
     
-    var centralManager : CBCentralManager?
-    var myPeripheral : CBPeripheral?
-    var heartMonitorCharacteristic : CBCharacteristic?
-    var stepsCharacteristic : CBCharacteristic?
-    var temperaturCharacteristic : CBCharacteristic?
+    var centralManager: CBCentralManager?
+    var myPeripheral: CBPeripheral?
+    
+    var heartRateCharacteristic: CBCharacteristic?
+    var stepsCountCharacteristic: CBCharacteristic?
+    var temperatureStatCharacteristic: CBCharacteristic?
+
     var uiDelegate : BLTManagerDelegate?
     static let shareInstance : BLTManager = {
         let instance = BLTManager()
-        instance.centralManager = CBCentralManager(delegate: instance, queue: nil)
+        instance.centralManager = CBCentralManager(delegate: instance, queue: nil, options: nil)
         
         
         return instance
     }()
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        if central.state == .poweredOn{
-            print("BLE ON")
+        if central.state == .poweredOn {
             central.scanForPeripherals(withServices: nil, options: nil)
         }
-        else{
-            print("BLE OFF")
+        else {
+            print("Error with BLE")
         }
     }
+    
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        for(key,value) in advertisementData{
-            if key == CBAdvertisementDataLocalNameKey && (value as! String)=="Yang Chen's Apple Watch"{
-                print("Found Yang!",value as! String)
+        
+        for (key, value) in advertisementData {
+            if key == "kCBAdvDataLocalName" && (value as! String) == "Yang Chen's Apple Watch" {
+                print("Found Mohit!!")
                 myPeripheral = peripheral
                 central.stopScan()
                 central.connect(myPeripheral!, options: nil)
             }
         }
     }
+    
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print("Connected to\(peripheral.name!)")
-        peripheral.delegate=self
+        print("Connected to: ", peripheral.name ?? "")
+        peripheral.delegate = self
+        
         peripheral.discoverServices(nil)
     }
+    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        
         for service in peripheral.services! {
-            if service.uuid.uuidString == Services.heartMonitor.rawValue{
+            if service.uuid.uuidString == Services.heartMonitor.rawValue {
                 print("Found heart monitor service")
                 peripheral.discoverCharacteristics(nil, for: service)
             }
-            if service.uuid.uuidString == Services.stepsMonitor.rawValue{
+            
+            if service.uuid.uuidString == Services.stepsMonitor.rawValue {
                 print("Found steps monitor service")
                 peripheral.discoverCharacteristics(nil, for: service)
             }
-            if service.uuid.uuidString == Services.temperatureMonitor.rawValue{
-                print("Found temperature monitor service")
+            
+            if service.uuid.uuidString == Services.temperatureMonitor.rawValue {
+                print("Found temperature service")
                 peripheral.discoverCharacteristics(nil, for: service)
             }
         }
     }
-    func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) {
-        print("services modified")
-        centralManager?.cancelPeripheralConnection(peripheral)
-        centralManager?.scanForPeripherals(withServices: nil, options: nil)
-        
-        
-
-    }
-    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        print("disconnected")
-        central.scanForPeripherals(withServices: nil, options: nil)
-    }
+    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        for characteris in service.characteristics!{
-            if characteris.uuid.uuidString == Characteristics.heartRate.rawValue{
-                heartMonitorCharacteristic = characteris
-                peripheral .setNotifyValue(true, for: characteris)
+        for characteristic in service.characteristics! {
+            if characteristic.uuid.uuidString == Characteristics.heartRate.rawValue {
+                heartRateCharacteristic = characteristic
+                myPeripheral?.setNotifyValue(true, for: heartRateCharacteristic!)
             }
-            if characteris.uuid.uuidString == Characteristics.stepsCount.rawValue{
-                stepsCharacteristic = characteris
+            
+            if characteristic.uuid.uuidString == Characteristics.stepsCount.rawValue {
+                stepsCountCharacteristic = characteristic
                 getSteps()
             }
-            if characteris.uuid.uuidString == Characteristics.temperatureStat.rawValue{
-                temperaturCharacteristic = characteris
-                getTemperature()
+            
+            if characteristic.uuid.uuidString == Characteristics.temperatureStat.rawValue {
+                temperatureStatCharacteristic = characteristic
+                getTemp()
             }
-
         }
     }
+    
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        if characteristic == stepsCharacteristic! {
+        
+        if characteristic == heartRateCharacteristic {
             if let value = characteristic.value {
                 let s = String(bytes: value, encoding: .utf8)
-                self.uiDelegate?.didGetStep(s ?? "")
-                print("Steps count:", s ?? "")
+                uiDelegate?.didGetHeartRate(s!)
+                print("Heart Rate: ", s ?? "")
             }
         }
-        if characteristic == heartMonitorCharacteristic{
+        if characteristic == stepsCountCharacteristic {
             if let value = characteristic.value {
                 let s = String(bytes: value, encoding: .utf8)
-                self.uiDelegate?.didGetHeartRate(s ?? "")
-                print("Heart Rate:", s ?? "")
-                
+                uiDelegate?.didGetStep(s!)
+                print("Steps count: ", s ?? "", "on date and time: ", Date().description)
+            }
+        }
+        if characteristic == temperatureStatCharacteristic {
+            if let value = characteristic.value {
+                let s = String(bytes: value, encoding: .utf8)
+                print("Body temperature: ", s ?? "")
             }
         }
     }
+    
+    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
+        
+        if error != nil {
+            print(error?.localizedDescription ?? "")
+        }
+    }
+    
     func getSteps() {
-        myPeripheral?.readValue(for: stepsCharacteristic!)
+        myPeripheral?.readValue(for: stepsCountCharacteristic!)
     }
-    func getTemperature() {
-        myPeripheral?.readValue(for: heartMonitorCharacteristic!)
+
+    
+    func getTemp() {
+        myPeripheral?.readValue(for: temperatureStatCharacteristic!)
     }
+    
+    
 }
+

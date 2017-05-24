@@ -353,6 +353,7 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     self.selectedIndex = scrollView.contentOffset.x / CGRectGetWidth(self.scrollView.frame);
+    [self.viewControllers[_selectedIndex] viewDidAppear:YES];
     self.scrollView.userInteractionEnabled = YES;
 }
 
