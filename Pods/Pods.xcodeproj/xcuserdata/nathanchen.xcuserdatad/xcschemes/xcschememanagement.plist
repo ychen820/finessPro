@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CSStickyHeaderFlowLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,10 +69,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2C4C33EA083F1E0255395A3E599E7DE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>57A52320C1E101BAB865A63656D8EE12</key>
+		<key>4C1BEA4CD86D4494B606051FB99E7119</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -123,6 +138,11 @@
 			<true/>
 		</dict>
 		<key>DDBCFDE490CDFDABF6F16A26F346932D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EADEE2E6577E5BC8A0328E018FC84939</key>
 		<dict>
 			<key>primary</key>
 			<true/>

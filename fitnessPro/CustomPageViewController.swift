@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class CustomPageViewController: UIViewController {
     @IBOutlet weak var mainView: UIView!
   
@@ -26,13 +26,14 @@ var pageContainer = DAPagesContainer()
         guard let heartRateController = storyboard?.instantiateViewController(withIdentifier: "heartVC") else{
             return
         }
-        
         guard let someOtherControler = storyboard?.instantiateViewController(withIdentifier: "stepView") else{
             return
         }
+        guard let profileViewController = storyboard?.instantiateViewController(withIdentifier: "ProfileView") else { return  }
+        profileViewController.title = Auth.auth().currentUser?.displayName
+        controllers.append(profileViewController)
         controllers.append(heartRateController)
         controllers.append(someOtherControler)
-        
         pageContainer.viewControllers = controllers
 
         // Do any additional setup after loading the view.

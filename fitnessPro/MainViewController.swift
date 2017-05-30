@@ -10,12 +10,12 @@ import UIKit
 import Foundation
 import CoreData
 class MainViewController: UIViewController,BLTManagerDelegate {
-   
+    @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var hrLabel: UILabel!
     @IBOutlet weak var heartImage: UIImageView!
     @IBOutlet weak var aLabel : UILabel!
     @IBOutlet weak var heartCircleView : UIView!
-    @IBOutlet weak var graphView : UIView!
+    @IBOutlet weak var graphView : ScrollableGraphView!
     var bltManager : BLTManager?
     var pulseTime : Timer?
     var heartRateNumber : Double?
@@ -24,10 +24,12 @@ class MainViewController: UIViewController,BLTManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         bltManager = BLTManager.shareInstance
-        tabBarController?.tabBar.tintColor = UIColor.red
+        bltManager?.uiDelegate = self
         heartCircleView.layer.cornerRadius = heartCircleView.frame.width/2
         heartCircleView.layer.borderColor = UIColor.red.cgColor
         heartCircleView.layer.borderWidth = 1
+        graphView.smoothDarkSetup()
+        graphView.set([0], withLabels: [""])
          // Do any additional setup after loading the view.
     }
 
@@ -37,17 +39,24 @@ class MainViewController: UIViewController,BLTManagerDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+         fetchHeartRateData()
         bltManager?.uiDelegate = self
         bltManager?.getSteps()
-        print(bltManager?.description)
-        fetchHeartRateData()
+        
+    }
+    override func didSwitchScreen() {
+  
+       
     }
     func didGetStep(_ step: String) {
         print(step)
     }
-
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
     func fetchHeartRateData(){
-        let fetchRequest = Heartrate.fetchRequest() as! NSFetchRequest<Heartrate>
+        let fetchRequest = CoreDataFilter.getFetchResult(fromDate: Date().startOfToday(), toDate: Date().endOfTheDay(), forEntity: "Heartrate") as! NSFetchRequest<Heartrate>
+        
         let sortDesc = NSSortDescriptor(key: "timestamp", ascending: true)
         fetchRequest.sortDescriptors = [sortDesc]
         ad?.persistentContainer.performBackgroundTask({ (backGroundContext) in
@@ -63,10 +72,7 @@ class MainViewController: UIViewController,BLTManagerDelegate {
                 dateFormatter.timeStyle = .short
                 let heartLabel = result.map{heartModel in dateFormatter.string(from:heartModel.timestamp! as Date) }
                 DispatchQueue.main.async {
-                    let graphView = ScrollableGraphView(frame: self.graphView.frame)
-                    graphView.smoothDarkSetup()
-                    graphView.set(heartData, withLabels: heartLabel)
-                    self.view .addSubview(graphView)
+                    self.graphView.set(heartData, withLabels: heartLabel)
                 }
                 
 
@@ -94,6 +100,13 @@ class MainViewController: UIViewController,BLTManagerDelegate {
         doHeartBeat()
 
     }
+    @IBAction func tempButtonAction(_ sender: UIButton) {
+        bltManager?.getTemp()
+    }
+    func didGetTemp(_ temp: String) {
+        tempLabel.text = temp
+    }
+    
     func doHeartBeat() {
         let layer = heartImage.layer
         let pulseAnimation = CABasicAnimation(keyPath:"transform.scale")

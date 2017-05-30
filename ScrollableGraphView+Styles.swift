@@ -9,7 +9,7 @@
 import Foundation
 extension ScrollableGraphView{
     func smoothDarkSetup(){
-        backgroundFillColor = UIColor.colorFromHex("#333333")
+        backgroundFillColor = UIColor.black
         
         rangeMax = 50
         
@@ -33,5 +33,28 @@ extension ScrollableGraphView{
         referenceLineLabelColor = UIColor.white
         dataPointLabelColor = UIColor.white.withAlphaComponent(0.5)
 
+    }
+    func pinkMontainSetup(){
+        backgroundFillColor = UIColor.colorFromHex("#222222")
+        lineColor = UIColor.clear
+        
+        shouldFill = true
+        fillColor = UIColor.colorFromHex("#FF0080")
+        
+        shouldDrawDataPoint = false
+        dataPointSpacing = 80
+        dataPointLabelFont = UIFont.boldSystemFont(ofSize: 10)
+        dataPointLabelColor = UIColor.white
+        
+        referenceLineThickness = 1
+        referenceLineLabelFont = UIFont.boldSystemFont(ofSize: 10)
+        referenceLineColor = UIColor.white.withAlphaComponent(0.5)
+        referenceLineLabelColor = UIColor.white
+        referenceLinePosition = ScrollableGraphViewReferenceLinePosition.both
+        
+        numberOfIntermediateReferenceLines = 1
+        
+        shouldAutomaticallyDetectRange = true
+        
     }
 }

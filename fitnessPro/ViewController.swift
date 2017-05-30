@@ -9,12 +9,10 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 import FirebaseAuth
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var emailTextfield: YoshikoTextField!
     @IBOutlet weak var passwordTextfield: YoshikoTextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +28,7 @@ class ViewController: UIViewController {
     }
     @IBAction func fBLogin(_ sender: UIButton) {
         let loginManager = LoginManager()
-        loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
+        loginManager.logIn([ .publicProfile,.email], viewController: self) { loginResult in
             switch loginResult {
             case .failed(let error):
                 print(error)
@@ -50,10 +48,12 @@ class ViewController: UIViewController {
                         guard let photoURL = user?.photoURL?.absoluteString else{
                             return
                         }
-                        
-                        let userDict = ["email":name,"photoURL":photoURL]
-                        userRef.setValue(userDict)
-                        
+                        guard let email = user?.email else{return}
+                        let userDict = ["name":name,"photoURL":photoURL,"email":email]
+                        userRef.updateChildValues(userDict)
+                        if let navCon = self.storyboard?.instantiateViewController(withIdentifier: "mainNav"){
+                            self.present(navCon, animated: true, completion: nil)
+                        }
                     }
                 })
                 
@@ -63,22 +63,21 @@ class ViewController: UIViewController {
         
     }
     @IBAction func emailLogin(_ sender: UIButton) {
-        if let tabCon = self.storyboard?.instantiateViewController(withIdentifier: "pageController"){
-            self.present(tabCon, animated: true, completion: nil)
-            /*
+        if let navCon = self.storyboard?.instantiateViewController(withIdentifier: "mainNav"){
+            
              guard let email = emailTextfield.text else { return  }
              guard let pwd = passwordTextfield.text else { return }
              Auth.auth().signIn(withEmail: email, password: pwd) { (userInfo, err) in
              if err != nil{
-             self.showAlert(message: (err?.localizedDescription)!, title: "Login Error", comlete: nil)
+             self.showAlert( (err?.localizedDescription)!, title: "Login Error", comlete: nil)
              }
              else{
-             if let tabCon = self.storyboard?.instantiateViewController(withIdentifier: "mainTab"){
-             self.present(tabCon, animated: true, completion: nil)
+           
+             self.present(navCon, animated: true, completion: nil)
+             
              }
              }
-             }
-             */
+ 
             
         }
     }

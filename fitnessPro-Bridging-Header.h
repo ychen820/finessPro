@@ -11,4 +11,5 @@
 #import "DAPagesContainer.h"
 #import "DAPageIndicatorView.h"
 #import "DAPagesContainerTopBar.h"
+#import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 #endif /* fitnessPro_Bridging_Header_h */

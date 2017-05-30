@@ -6,15 +6,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataFilter.swift"
+            timestampString = "517437786.412237"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getCurrentYearRange(fordate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Date+Utilities.swift"
+            timestampString = "517519376.280134"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "startOfToday()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fitnessPro/ProfileViewController.swift"
+            timestampString = "517865106.926325"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "loadRunningData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserModel.swift"
+            timestampString = "517815373.798062"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "init(withSnap:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fitnessPro/StepViewController.swift"
-            timestampString = "517289745.669766"
+            timestampString = "517814745.963224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "didGetStep(_:)"
             landmarkType = "7">
             <Locations>
@@ -22,16 +86,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "protocol witness for fitnessPro.BLTManagerDelegate.didGetStep (Swift.String) -&gt; () in conformance fitnessPro.StepViewController : fitnessPro.BLTManagerDelegate in fitnessPro"
+                  symbolName = "fitnessPro.StepViewController.didGetStep (Swift.String) -&gt; ()"
                   moduleName = "fitnessPro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nathanchen/code/Swift/fitnessPro/fitnessPro/StepViewController.swift"
-                  timestampString = "517293906.672828"
+                  timestampString = "517867800.346361"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "224">
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "1108">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,27 +105,12 @@
                   moduleName = "fitnessPro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nathanchen/code/Swift/fitnessPro/fitnessPro/StepViewController.swift"
-                  timestampString = "517293906.67532"
+                  timestampString = "517867800.34832"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed and Exploded, Arg[1] = Dead&gt; of fitnessPro.StepViewController.didGetStep (Swift.String) -&gt; ()"
-                  moduleName = "fitnessPro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanchen/code/Swift/fitnessPro/fitnessPro/StepViewController.swift"
-                  timestampString = "517293906.67694"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "120">
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "3416">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -73,45 +122,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fitnessPro/StepViewController.swift"
-            timestampString = "517293906.5411"
+            timestampString = "517814745.963224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "buttonAction(_:)"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "getTotalStep()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "fitnessPro.StepViewController.buttonAction (__ObjC.UIButton) -&gt; ()"
-                  moduleName = "fitnessPro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanchen/code/Swift/fitnessPro/fitnessPro/StepViewController.swift"
-                  timestampString = "517290698.652732"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "@objc fitnessPro.StepViewController.buttonAction (__ObjC.UIButton) -&gt; ()"
-                  moduleName = "fitnessPro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanchen/code/Swift/fitnessPro/fitnessPro/StepViewController.swift"
-                  timestampString = "517290698.654161"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -120,14 +137,62 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "fitnessPro/StepViewController.swift"
-            timestampString = "517293906.5411"
+            filePath = "fitnessPro/ProfileViewController.swift"
+            timestampString = "517865106.926325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "StepViewController"
-            landmarkType = "3">
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "followAction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "fitnessPro.ProfileViewController.followAction () -&gt; ()"
+                  moduleName = "fitnessPro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanchen/code/Swift/fitnessPro/fitnessPro/ProfileViewController.swift"
+                  timestampString = "517867800.352752"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "fitnessPro.ProfileViewController.followAction () -&gt; ()"
+                  moduleName = "fitnessPro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanchen/code/Swift/fitnessPro/fitnessPro/ProfileViewController.swift"
+                  timestampString = "517867800.354381"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "2352">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fitnessPro/ProfileViewController.swift"
+            timestampString = "517865106.926325"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "loadUserInformation()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

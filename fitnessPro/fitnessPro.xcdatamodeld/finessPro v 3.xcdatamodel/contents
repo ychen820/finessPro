@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DailyGoal" representedClassName="DailyGoal" syncable="YES">
+        <attribute name="achieved" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="actualStep" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="goalstep" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Heartrate" representedClassName="Heartrate" syncable="YES">
+        <attribute name="heartrate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="Step" representedClassName="Step" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="TotalGoal" representedClassName="TotalGoal" syncable="YES">
+        <attribute name="step" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Yearly" representedClassName="Yearly" syncable="YES">
+        <attribute name="actualStep" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DailyGoal" positionX="-36" positionY="27" width="128" height="105"/>
+        <element name="Heartrate" positionX="-54" positionY="9" width="128" height="75"/>
+        <element name="Step" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Yearly" positionX="-36" positionY="45" width="128" height="75"/>
+        <element name="TotalGoal" positionX="-36" positionY="45" width="128" height="60"/>
+    </elements>
+</model>

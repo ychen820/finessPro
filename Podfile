@@ -12,6 +12,8 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'GoogleSignIn'
 pod 'MKRingProgressView'
+pod 'CSStickyHeaderFlowLayout'
+pod 'SDWebImage', '~>3.8'
   # Pods for fitnessPro
 
 end

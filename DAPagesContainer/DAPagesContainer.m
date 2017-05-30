@@ -352,8 +352,9 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    
     self.selectedIndex = scrollView.contentOffset.x / CGRectGetWidth(self.scrollView.frame);
-    [self.viewControllers[_selectedIndex] viewDidAppear:YES];
+    [self.viewControllers[_selectedIndex]didSwitchScreen];
     self.scrollView.userInteractionEnabled = YES;
 }
 
@@ -371,7 +372,6 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    self.scrollView.userInteractionEnabled = NO;
 }
 
 #pragma mark - KVO

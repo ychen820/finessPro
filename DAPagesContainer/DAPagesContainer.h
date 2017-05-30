@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIViewController+DAPage.h"
 
 @interface DAPagesContainer : UIViewController
 

@@ -23,6 +23,20 @@ enum Characteristics: String {
 protocol BLTManagerDelegate {
     func didGetStep(_ step : String)
     func didGetHeartRate (_ heartRate : String)
+    func didGetTemp(_ temp : String)
+    
+}
+extension BLTManagerDelegate{
+    func didGetStep(_ step : String){
+        
+    }
+    func didGetHeartRate (_ heartRate : String){
+        
+    }
+    func didGetTemp(_ temp : String){
+        
+    }
+
 }
 class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
     
@@ -36,7 +50,7 @@ class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
     var uiDelegate : BLTManagerDelegate?
     static let shareInstance : BLTManager = {
         let instance = BLTManager()
-        instance.centralManager = CBCentralManager(delegate: instance, queue: nil, options: nil)
+        instance.centralManager = CBCentralManager(delegate: instance, queue: nil)
         
         
         return instance
@@ -128,6 +142,7 @@ class BLTManager: NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
         if characteristic == temperatureStatCharacteristic {
             if let value = characteristic.value {
                 let s = String(bytes: value, encoding: .utf8)
+                uiDelegate?.didGetTemp(s!)
                 print("Body temperature: ", s ?? "")
             }
         }
